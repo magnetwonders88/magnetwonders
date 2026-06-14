@@ -1,72 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MagnetWonders</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f9f9f9;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MagnetWonders</title>
 
-        header {
-            background: #000;
-            color: #fff;
-            padding: 30px 20px;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f9f9f9, #ffe6f0);
+    text-align: center;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 2.2rem;
-            letter-spacing: 1px;
-        }
+/* Header */
+header {
+    background: linear-gradient(to right, #000, #333);
+    color: white;
+    padding: 40px 20px;
+}
 
-        .hero {
-            padding: 40px 20px;
-        }
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
 
-        .hero img {
-            width: 90%;
-            max-width: 400px;
-            border-radius: 10px;
-        }
+header p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
 
-        .hero h2 {
-            margin-top: 20px;
-            font-size: 1.8rem;
-        }
+/* Hero section */
+.hero {
+    padding: 40px 20px;
+}
 
-        .hero p {
-            color: #555;
-            font-size: 1rem;
-        }
+.hero img {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 20px;
-            background: #ff4081;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
+.hero h2 {
+    font-size: 2rem;
+    color: #333;
+}
 
-        .btn:hover {
-            background: #e73370;
-        }
+.hero p {
+    font-size: 1rem;
+    color: #555;
+    max-width: 600px;
+    margin: auto;
+}
 
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background: #000;
-            color: #ccc;
-            font-size: 0.9rem;
-        }
-    </style>
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #ff4081;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #e73370;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px;
+}
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: #ccc;
+    padding: 20px;
+}
+
+footer a {
+    color: #ff4081;
+    text-decoration: none;
+}
+</style>
 </head>
 
 <body>
@@ -77,22 +108,35 @@
 </header>
 
 <div class="hero">
-    <img src="https://via.placeholder.com/400x300" alt="Magnet Sample">
+
+    <img src="https://images.unsplash.com/photo-1606788075761-5f7c2aa4c57d" alt="Magnet Sample">
 
     <h2>Turn Your Memories Into Magnets 🧲</h2>
 
     <p>
         High-quality custom fridge magnets made from your favorite photos.  
-        Perfect for gifts, home decor, and special occasions.
+        Perfect for gifts, birthdays, and special occasions.
     </p>
 
     <a class="btn" href="https://instagram.com/magnetwonders88" target="_blank">
         Order on Instagram
     </a>
+
+</div>
+
+<!-- Gallery Section -->
+<h2>Our Creations</h2>
+
+<div class="gallery">
+    <img src="https://images.unsplash.com/photo-1587614203976-365c74645e83">
+    <img src="https://images.unsplash.com/photo-1581291518649-83c0efb4d39b">
+    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
+    <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
 </div>
 
 <footer>
-    © 2026 MagnetWonders | Auckland, NZ
+    <p>📧 Contact: <a href="mailto:anu@magnetwonders.com">anu@magnetwonders.com</a></p>
+    <p>© 2026 MagnetWonders | Auckland, NZ</p>
 </footer>
 
 </body>
