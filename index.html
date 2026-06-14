@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,46 +26,52 @@ header h1 {
     font-size: 2.5rem;
 }
 
-header p {
-    font-size: 1.2rem;
-}
-
 /* Hero */
 .hero {
     padding: 40px 20px;
 }
 
 .hero img {
-    width: 100%;
-    max-width: 420px;
-    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    border-radius: 10px;
 }
 
-.hero h2 {
-    font-size: 2rem;
-    margin-top: 20px;
-}
-
-.hero p {
-    color: #555;
-    max-width: 600px;
-    margin: auto;
-}
-
-/* Button */
 .btn {
     display: inline-block;
-    margin-top: 20px;
+    margin: 10px;
     padding: 12px 20px;
-    background: #ff416c;
     color: white;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
 }
 
-.btn:hover {
-    background: #e63b5e;
+.btn-instagram {
+    background: #ff416c;
+}
+
+.btn-whatsapp {
+    background: #25d366;
+}
+
+/* Pricing */
+.pricing {
+    background: #fff;
+    padding: 30px;
+}
+
+.card {
+    background: #fafafa;
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #ff416c;
 }
 
 /* Gallery */
@@ -73,7 +80,7 @@ header p {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    padding: 30px;
+    padding: 20px;
 }
 
 .gallery img {
@@ -89,11 +96,6 @@ footer {
     color: #ccc;
     padding: 20px;
 }
-
-footer a {
-    color: #ff416c;
-    text-decoration: none;
-}
 </style>
 
 </head>
@@ -106,22 +108,49 @@ footer a {
 </header>
 
 <div class="hero">
-
     <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=500" alt="Magnet sample">
 
     <h2>Turn Your Memories Into Magnets</h2>
 
     <p>
-        High-quality custom fridge magnets made from your favorite photos.  
-        Perfect for gifts, birthdays, and special occasions.
+        Custom fridge magnets from your photos. Perfect gifts for birthdays, anniversaries and special moments.
     </p>
 
-    <a class="btn" href="https://instagram.com/magnetwonders88" target="_blank">
+    <a class="btn btn-instagram" href="https://instagram.com/magnetwonders88" target="_blank">
         Order on Instagram
     </a>
 
+    <a class="btn btn-whatsapp" href="https://wa.me/64210000000" target="_blank">
+        Order on WhatsApp
+    </a>
 </div>
 
+<!-- Pricing Section -->
+<div class="pricing">
+    <h2>Pricing</h2>
+
+    <div class="card">
+        <h3>Single Magnet</h3>
+        <p>From $6 NZD</p>
+    </div>
+
+    <div class="card">
+        <h3>2 Magnets Pack</h3>
+        <p>From $10 NZD</p>
+    </div>
+
+    <div class="card">
+        <h3>5 Magnets Pack</h3>
+        <p>From $23 NZD</p>
+    </div>
+
+    <div class="card">
+        <h3>Bulk Orders</h3>
+        <p>Discount Available</p>
+    </div>
+</div>
+
+<!-- Gallery -->
 <h2>Our Creations</h2>
 
 <div class="gallery">
@@ -132,7 +161,7 @@ footer a {
 </div>
 
 <footer>
-    <p>📧 Contact: <a href="mailto:anu@magnetwonders.com">anu@magnetwonders.com</a></p>
+    <p>📧 anu@magnetwonders.com</p>
     <p>© 2026 MagnetWonders | Auckland, NZ</p>
 </footer>
 
