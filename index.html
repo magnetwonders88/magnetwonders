@@ -18,17 +18,69 @@ header {
     padding: 60px 20px;
     text-align: center;
     color: white;
+    position: relative;
+    overflow: hidden;
 }
 
-header h1 {
-    font-size: 3.2rem;
-    margin: 0;
-    text-shadow: 0 0 20px white;
+/* MAGIC TITLE */
+.magnet {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+
+    /* glowing */
+    text-shadow: 
+        0 0 10px #fff,
+        0 0 25px #fff,
+        0 0 45px #ffd700,
+        0 0 70px rgba(255,255,255,0.7);
+
+    animation: swim 6s ease-in-out infinite alternate, glow 2s infinite;
 }
 
-header p {
-    margin-top: 10px;
-    font-size: 1.2rem;
+/* Swimming animation */
+@keyframes swim {
+    0% { transform: translateX(-40px); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(50px); }
+}
+
+/* Glow pulse */
+@keyframes glow {
+    0%,100% { opacity: 0.9; }
+    50% { opacity: 1; text-shadow: 0 0 80px #fff; }
+}
+
+/* Sparkles */
+.magnet::before,
+.magnet::after {
+    content: "✨ ✦ ✨";
+    position: absolute;
+    font-size: 1.5rem;
+    animation: sparkle 3s infinite linear;
+}
+
+.magnet::before {
+    top: -20px;
+    left: -40px;
+}
+
+.magnet::after {
+    bottom: -20px;
+    right: -40px;
+}
+
+@keyframes sparkle {
+    0% { opacity: 0; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(-10px); }
+    100% { opacity: 0; transform: translateY(10px); }
+}
+
+/* TAGLINE */
+.tagline {
+    font-size: 1.4rem;
+    font-style: italic;
+    font-family: Georgia, serif;
 }
 
 /* HERO */
@@ -53,32 +105,23 @@ header p {
     flex: 1;
 }
 
-.hero-text h2 {
-    font-size: 2rem;
-}
-
 .hero-text span {
     color: #ff4b6e;
 }
 
-/* BUTTONS */
+/* BUTTON */
 .btn {
     display: inline-block;
     padding: 12px 20px;
-    margin: 10px 10px 0 0;
+    margin-top: 15px;
     border-radius: 25px;
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-.instagram {
-    background: #e1306c;
-}
-
-.whatsapp {
-    background: #25d366;
-}
+.instagram { background: #e1306c; }
+.whatsapp { background: #25d366; }
 
 /* PRICING */
 .pricing {
@@ -108,26 +151,20 @@ header p {
     object-fit: cover;
 }
 
-/* FLOATING WHATSAPP */
+/* FLOAT WHATSAPP */
 .float {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background: #25d366;
+    color: white;
     width: 55px;
     height: 55px;
     border-radius: 50%;
     text-align: center;
-    font-size: 30px;
-    color: white;
+    font-size: 28px;
     line-height: 55px;
     text-decoration: none;
-}
-
-/* INSTAGRAM TEXT LINK */
-.insta-link {
-    text-align: center;
-    margin: 20px;
 }
 </style>
 
@@ -136,27 +173,31 @@ header p {
 <body>
 
 <header>
-    <h1>MagnetWonders 🧲</h1>
-    <p>Turn Your Photos Into Beautiful Memories Forever</p>
+    <h1 class="magnet">MagnetWonders 🧲</h1>
+    <p class="tagline">Turn Your Photos Into Beautiful Memories Forever</p>
 </header>
 
 <!-- HERO -->
 <div class="hero">
-    
-    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="magnet">
-    
+
+    <!-- INTERNET IMAGE -->
+    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800" alt="magnet">
+
     <div class="hero-text">
         <h2>Custom <span>Photo Fridge Magnets</span> made with love in NZ</h2>
+
         <p>
-            Turn your favorite photos into beautiful magnets. Perfect for gifts, birthdays and memories.
+            Turn your favorite photos into beautiful magnets — perfect for gifts and memories.
         </p>
 
         <a class="btn instagram" href="https://instagram.com/magnetwonders88" target="_blank">
-            Instagram (@magnetwonders88)
+            Instagram @magnetwonders88
         </a>
 
+        <br>
+
         <a class="btn whatsapp" href="https://wa.me/64212319201" target="_blank">
-            WhatsApp (+64212319201)
+            WhatsApp +64212319201
         </a>
     </div>
 
@@ -180,32 +221,19 @@ header p {
         <h3>5 Pack</h3>
         <p>$25 NZD</p>
     </div>
-
 </div>
 
 <!-- GALLERY -->
 <div class="gallery">
     <h2>Our Creations</h2>
-
-    <img src="1.jpeg">
     <img src="2.jpeg">
     <img src="3.jpeg">
     <img src="4.jpeg">
     <img src="5.jpeg">
 </div>
 
-<!-- INSTAGRAM TEXT -->
-<div class="insta-link">
-    Follow us: 
-    <a href="https://instagram.com/magnetwonders88" target="_blank">
-        @magnetwonders88
-    </a>
-</div>
-
-<!-- FLOAT WHATSAPP -->
-<a href="https://wa.me/64212319201" class="float" target="_blank">
-    🟢
-</a>
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/64212319201" class="float" target="_blank">🟢</a>
 
 </body>
 </html>
