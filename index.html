@@ -8,108 +8,126 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background: #f5f5f5;
-    text-align: center;
 }
 
 /* HEADER */
 header {
-    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    background: linear-gradient(to right, #ff4b6e, #ff9a44);
+    padding: 60px 20px;
+    text-align: center;
     color: white;
-    padding: 40px 20px;
 }
 
-/* RED FLASHING + SWIMMING TEXT */
 header h1 {
-    font-size: 3rem;
-    color: red;
-    animation: swim 5s ease-in-out infinite alternate, flash 1.5s infinite;
+    font-size: 3.2rem;
+    margin: 0;
+    text-shadow: 0 0 20px white;
 }
 
-/* Fish swimming effect */
-@keyframes swim {
-    0% { transform: translateX(-40px); }
-    50% { transform: translateX(20px); }
-    100% { transform: translateX(40px); }
-}
-
-/* Flash glow */
-@keyframes flash {
-    0%,100% { text-shadow: 0 0 5px red; }
-    50% { text-shadow: 0 0 25px red, 0 0 40px orange; }
+header p {
+    margin-top: 10px;
+    font-size: 1.2rem;
 }
 
 /* HERO */
 .hero {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
     background: white;
-    margin: 30px auto;
-    padding: 30px;
-    width: 90%;
-    max-width: 500px;
-    border: 5px solid gold;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 20px;
 }
 
+.hero img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+}
+
+.hero-text span {
+    color: #ff4b6e;
+}
+
+/* BUTTONS */
 .btn {
-    display: block;
-    margin: 12px auto;
-    padding: 12px;
-    width: 80%;
-    max-width: 250px;
-    border-radius: 6px;
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 10px 10px 0 0;
+    border-radius: 25px;
+    color: white;
     text-decoration: none;
     font-weight: bold;
-    color: white;
 }
 
-.btn-instagram {
+.instagram {
     background: #e1306c;
 }
 
-.btn-whatsapp {
+.whatsapp {
     background: #25d366;
 }
 
 /* PRICING */
 .pricing {
-    margin-top: 30px;
+    text-align: center;
+    margin: 40px 0;
 }
 
 .card {
+    display: inline-block;
     background: white;
-    margin: 15px auto;
+    margin: 10px;
     padding: 20px;
-    border-radius: 10px;
-    max-width: 300px;
-    border: 2px solid #eee;
+    border-radius: 15px;
+    width: 200px;
 }
 
 /* GALLERY */
 .gallery {
-    margin-top: 30px;
+    text-align: center;
 }
 
 .gallery img {
     width: 180px;
     height: 180px;
-    object-fit: cover;
     margin: 10px;
     border-radius: 15px;
-    border: 3px solid gold;
-    transition: 0.3s;
+    object-fit: cover;
 }
 
-.gallery img:hover {
-    transform: scale(1.1);
-}
-
-/* FOOTER */
-footer {
-    margin-top: 30px;
-    padding: 20px;
-    background: #111;
+/* FLOATING WHATSAPP */
+.float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
     color: white;
+    line-height: 55px;
+    text-decoration: none;
+}
+
+/* INSTAGRAM TEXT LINK */
+.insta-link {
+    text-align: center;
+    margin: 20px;
 }
 </style>
 
@@ -119,53 +137,56 @@ footer {
 
 <header>
     <h1>MagnetWonders 🧲</h1>
-    <p>Your Photos Your Memories Forever</p>
+    <p>Turn Your Photos Into Beautiful Memories Forever</p>
 </header>
 
+<!-- HERO -->
 <div class="hero">
-    <h2>Scan or Send Your Photos</h2>
-    <p>Turn your beautiful moments into fridge magnets ❤️</p>
+    
+    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="magnet">
+    
+    <div class="hero-text">
+        <h2>Custom <span>Photo Fridge Magnets</span> made with love in NZ</h2>
+        <p>
+            Turn your favorite photos into beautiful magnets. Perfect for gifts, birthdays and memories.
+        </p>
 
-    <a class="btn btn-instagram" 
-       href="https://instagram.com/magnetwonders88" target="_blank">
-       Order via Instagram (@magnetwonders88)
-    </a>
+        <a class="btn instagram" href="https://instagram.com/magnetwonders88" target="_blank">
+            Instagram (@magnetwonders88)
+        </a>
 
-    <a class="btn btn-whatsapp" 
-       href="https://wa.me/64212319201" target="_blank">
-       Chat on WhatsApp (+64212319201)
-    </a>
+        <a class="btn whatsapp" href="https://wa.me/64212319201" target="_blank">
+            WhatsApp (+64212319201)
+        </a>
+    </div>
+
 </div>
 
 <!-- PRICING -->
 <div class="pricing">
-    <h2 style="color:#ff416c;">Pricing</h2>
+    <h2>Pricing</h2>
 
     <div class="card">
-        <h3>Single Magnet</h3>
-        <p>From $6 NZD</p>
+        <h3>Single</h3>
+        <p>$6 NZD</p>
     </div>
 
     <div class="card">
-        <h3>3 Magnets Pack</h3>
-        <p>From $15 NZD</p>
+        <h3>3 Pack</h3>
+        <p>$15 NZD</p>
     </div>
 
     <div class="card">
-        <h3>5 Magnets Pack</h3>
-        <p>From $25 NZD</p>
+        <h3>5 Pack</h3>
+        <p>$25 NZD</p>
     </div>
 
-    <div class="card">
-        <h3>Bulk Orders</h3>
-        <p>Discount Available</p>
-    </div>
 </div>
 
 <!-- GALLERY -->
-<h2 style="color:#ff416c;">Our Creations We Have Made ✨</h2>
-
 <div class="gallery">
+    <h2>Our Creations</h2>
+
     <img src="1.jpeg">
     <img src="2.jpeg">
     <img src="3.jpeg">
@@ -173,11 +194,18 @@ footer {
     <img src="5.jpeg">
 </div>
 
-<footer>
-    <p>📧 anu@magnetwonders.com</p>
-    <p>Instagram: magnetwonders88</p>
-    <p>WhatsApp: +64212319201</p>
-</footer>
+<!-- INSTAGRAM TEXT -->
+<div class="insta-link">
+    Follow us: 
+    <a href="https://instagram.com/magnetwonders88" target="_blank">
+        @magnetwonders88
+    </a>
+</div>
+
+<!-- FLOAT WHATSAPP -->
+<a href="https://wa.me/64212319201" class="float" target="_blank">
+    🟢
+</a>
 
 </body>
 </html>
