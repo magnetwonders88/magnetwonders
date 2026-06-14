@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,72 +8,107 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(to right, #fdfbfb, #ebedee);
     text-align: center;
 }
 
-/* Header */
+/* HEADER */
 header {
-    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    background: linear-gradient(135deg, #ff416c, #ff4b2b, #ff6a00);
     color: white;
-    padding: 40px 20px;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
 }
 
 header h1 {
+    font-size: 3rem;
+    font-weight: 800;
     margin: 0;
-    font-size: 2.5rem;
+    animation: float 3s ease-in-out infinite;
 }
 
-/* Hero */
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+/* HERO */
 .hero {
     padding: 40px 20px;
 }
 
 .hero img {
-    max-width: 400px;
+    max-width: 420px;
     width: 90%;
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
+/* BUTTONS */
 .btn {
     display: inline-block;
-    margin: 10px;
-    padding: 12px 20px;
+    margin: 12px;
+    padding: 14px 24px;
     color: white;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 30px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .btn-instagram {
-    background: #ff416c;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
 }
 
 .btn-whatsapp {
-    background: #25d366;
+    background: linear-gradient(to right, #25d366, #128c7e);
 }
 
-/* Pricing */
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* PRICING */
 .pricing {
-    background: #fff;
-    padding: 30px;
+    padding: 40px 20px;
+}
+
+.pricing h2 {
+    margin-bottom: 20px;
 }
 
 .card {
-    background: #fafafa;
-    margin: 15px auto;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 300px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    margin: 15px;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 250px;
+    display: inline-block;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card h3 {
     color: #ff416c;
 }
 
-/* Gallery */
+/* GALLERY */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -84,13 +118,19 @@ header h1 {
 }
 
 .gallery img {
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 12px;
+    transition: 0.3s;
 }
 
-/* Footer */
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
 footer {
     background: #111;
     color: #ccc;
@@ -104,11 +144,11 @@ footer {
 
 <header>
     <h1>MagnetWonders 🧲</h1>
-    <p>Custom Photo Fridge Magnets in NZ</p>
+    <p>Turn Your Favourite Moments into Beautiful Magnets ❤️</p>
 </header>
 
 <div class="hero">
-    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=500" alt="Magnet sample">
+    <img src="1.jpeg" alt="Magnet sample">
 
     <h2>Turn Your Memories Into Magnets</h2>
 
@@ -153,7 +193,6 @@ footer {
 <!-- Gallery -->
 <h2>Our Creations</h2>
 
-
 <div class="gallery">
     <img src="1.jpeg" alt="Magnet 1">
     <img src="2.jpeg" alt="Magnet 2">
@@ -161,7 +200,6 @@ footer {
     <img src="4.jpeg" alt="Magnet 4">
     <img src="5.jpeg" alt="Magnet 5">
 </div>
-
 
 <footer>
     <p>📧 anu@magnetwonders.com</p>
