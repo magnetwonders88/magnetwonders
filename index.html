@@ -54,7 +54,7 @@
         height: 220px;
         top: -60px;
         left: -40px;
-        background: rgba(173, 73, 255, 0.7);
+        background: rgba(173, 73, 255, 0.8);
     }
 
     header::after {
@@ -62,7 +62,7 @@
         height: 280px;
         bottom: -110px;
         right: -70px;
-        background: rgba(59, 103, 255, 0.65);
+        background: rgba(59, 103, 255, 0.7);
     }
 
     /* ===== TITLE ===== */
@@ -70,29 +70,37 @@
         position: relative;
         z-index: 2;
         display: inline-block;
-        font-size: clamp(2.3rem, 5vw, 4.2rem);
+        font-size: clamp(2.5rem, 6vw, 4.6rem);
         font-weight: 900;
         letter-spacing: 1px;
         line-height: 1.1;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
 
-        /* blue-violet text effect */
-        background: linear-gradient(90deg, #8db8ff, #d7b8ff, #7f67ff, #9cc7ff);
-        background-size: 250% 250%;
+        /* rainbow gradient */
+        background: linear-gradient(
+            90deg,
+            #7f67ff,
+            #4cc9ff,
+            #ff6ec7,
+            #ffd86b,
+            #b388ff,
+            #7f67ff
+        );
+        background-size: 300% 300%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         color: transparent;
 
-        text-shadow:
-            0 0 10px rgba(191, 165, 255, 0.25),
-            0 0 22px rgba(124, 98, 255, 0.25),
-            0 0 38px rgba(91, 153, 255, 0.15);
-
         animation:
+            rainbowMove 6s linear infinite,
             titleSwim 5s ease-in-out infinite alternate,
-            titleGlow 2.4s ease-in-out infinite,
-            textShift 8s ease-in-out infinite;
+            titleGlow 2.4s ease-in-out infinite;
+    }
+
+    @keyframes rainbowMove {
+        0%   { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
     }
 
     @keyframes titleSwim {
@@ -105,50 +113,52 @@
 
     @keyframes titleGlow {
         0%, 100% {
-            filter: drop-shadow(0 0 8px rgba(190, 180, 255, 0.35))
-                    drop-shadow(0 0 18px rgba(122, 84, 255, 0.25));
+            filter:
+                drop-shadow(0 0 10px rgba(170, 140, 255, 0.45))
+                drop-shadow(0 0 22px rgba(122, 84, 255, 0.35))
+                drop-shadow(0 0 34px rgba(87, 167, 255, 0.22));
         }
         50% {
-            filter: drop-shadow(0 0 14px rgba(210, 199, 255, 0.55))
-                    drop-shadow(0 0 28px rgba(92, 150, 255, 0.35));
+            filter:
+                drop-shadow(0 0 16px rgba(210, 199, 255, 0.7))
+                drop-shadow(0 0 32px rgba(168, 104, 255, 0.45))
+                drop-shadow(0 0 44px rgba(92, 150, 255, 0.35));
         }
     }
 
-    @keyframes textShift {
-        0%   { background-position: 0% 50%; }
-        50%  { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-
-    /* Sparkles */
+    /* ===== BRIGHTER PURPLE SPARKLES ===== */
     .magnet::before,
     .magnet::after {
         position: absolute;
         z-index: 3;
-        font-size: 1.4rem;
-        color: #fff3c2;
-        text-shadow: 0 0 12px rgba(255,255,255,0.9);
-        animation: sparkleFloat 2.8s ease-in-out infinite;
+        font-size: 1.7rem;
+        color: #d9b3ff;
+        text-shadow:
+            0 0 8px #f0d4ff,
+            0 0 16px #c084ff,
+            0 0 28px #a855f7,
+            0 0 42px #7c3aed;
+        animation: sparkleMagic 2.6s ease-in-out infinite;
         pointer-events: none;
     }
 
     .magnet::before {
-        content: "✨ ✦";
-        top: -18px;
-        left: -70px;
+        content: "✨ ✦ ✨";
+        top: -24px;
+        left: -92px;
     }
 
     .magnet::after {
-        content: "✦ ✨";
-        bottom: -14px;
-        right: -65px;
-        animation-delay: 1s;
+        content: "✦ ✨ ✦";
+        bottom: -22px;
+        right: -88px;
+        animation-delay: 1.1s;
     }
 
-    @keyframes sparkleFloat {
+    @keyframes sparkleMagic {
         0%   { opacity: 0; transform: translateY(10px) scale(0.8); }
-        50%  { opacity: 1; transform: translateY(-7px) scale(1.05); }
-        100% { opacity: 0; transform: translateY(8px) scale(0.85); }
+        50%  { opacity: 1; transform: translateY(-10px) scale(1.18); }
+        100% { opacity: 0; transform: translateY(10px) scale(0.9); }
     }
 
     .tagline {
@@ -417,13 +427,13 @@
         .magnet::before {
             left: -30px;
             top: -20px;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
         .magnet::after {
             right: -28px;
             bottom: -14px;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
         .hero {
@@ -527,7 +537,7 @@
     <p>
         Instagram: <a href="https://instagram.com/magnetwonders88" target="_blank">@magnetwonders88</a>
         &nbsp; | &nbsp;
-        WhatsApp: <a href="https://wa.me/64212319201" target="_blank">+64212319201</a>
+        WhatsApp: <a href="https://wa.me/64212319201" target="_blank">+64 212319201</a>
     </p>
     <p>© 2026 MagnetWonders | Auckland, NZ</p>
 </footer>
